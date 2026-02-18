@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marcos Vinicius | Integrações e Automações</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Portfólio - Marcos Vinicius</title>
 
 <style>
 
@@ -13,208 +12,177 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: #e2e8f0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+/* animação */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
 }
 
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* header */
 header {
-    padding-top: 60px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
 }
 
-h1 {
-    font-size: 48px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #38bdf8, #6366f1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+header h1 {
+    font-size: 32px;
 }
 
-.subtitle {
-    font-size: 20px;
+header p {
     margin-top: 10px;
     color: #94a3b8;
 }
 
-.section {
-    margin-top: 60px;
-}
-
-.section-title {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: #38bdf8;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* seção */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .card {
-    background: rgba(15, 23, 42, 0.6);
-    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    margin: 20px 0;
     border-radius: 12px;
-    border: 1px solid rgba(56, 189, 248, 0.2);
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    background: rgba(255,255,255,0.08);
 }
 
-.skill {
+/* botão */
+.btn {
     display: inline-block;
-    background: rgba(56,189,248,0.15);
-    padding: 8px 14px;
-    border-radius: 8px;
-    margin: 5px;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    padding: 12px 25px;
+    background: #22c55e;
     color: white;
-    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 15px;
     transition: 0.3s;
 }
 
-.button:hover {
+.btn:hover {
+    background: #16a34a;
     transform: scale(1.05);
 }
 
+/* whatsapp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50px;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+}
+
 footer {
-    margin-top: 60px;
     text-align: center;
-    color: #64748b;
+    padding: 30px;
+    color: #94a3b8;
 }
 
 </style>
 </head>
+
 <body>
 
-<div class="container">
-
-<header>
+<header class="hidden">
 <h1>Marcos Vinicius</h1>
-<div class="subtitle">
-Especialista em Integrações de Sistemas e Automações
-</div>
-
-<a href="https://github.com" class="button">Ver GitHub</a>
-
+<p>Desenvolvedor | Integrações | Automação | ERP | APIs</p>
 </header>
 
+<section>
 
-<div class="section">
-<div class="section-title">Sobre mim</div>
-
-<div class="card">
+<div class="card hidden">
+<h2>Sobre mim</h2>
 <p>
-Desenvolvedor focado em integrações de sistemas, automações e desenvolvimento de soluções personalizadas utilizando APIs.
+Desenvolvedor especializado em automações, integrações com ERP, APIs,
+Mercado Livre, WhatsApp e sistemas empresariais.
 </p>
-
-<br>
-
-<p>
-Experiência com automações, integrações com ERP, WhatsApp, e plataformas de e-commerce.
-</p>
-
-</div>
 </div>
 
+<div class="card hidden">
+<h2>Projetos</h2>
 
+<p>Sistema de integração com ERP Tiny</p>
 
-<div class="section">
-<div class="section-title">Tecnologias</div>
+<p>Automação de atendimento via WhatsApp com IA</p>
 
-<div class="card">
-
-<span class="skill">Python</span>
-<span class="skill">JavaScript</span>
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
-<span class="skill">APIs REST</span>
-<span class="skill">FastAPI</span>
-<span class="skill">Automação</span>
-<span class="skill">Integrações ERP</span>
+<p>Integração Mercado Livre com BI e ERP</p>
 
 </div>
 
-</div>
+<div class="card hidden">
+<h2>Contato</h2>
 
+<p>Clique no botão abaixo para falar comigo:</p>
 
-
-<div class="section">
-<div class="section-title">Projetos</div>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>Integração WhatsApp + IA</h3>
-<p>Sistema automatizado de respostas usando IA integrado ao WhatsApp.</p>
-</div>
-
-<div class="card">
-<h3>Integração com ERP</h3>
-<p>Automação de pedidos, estoque e faturamento usando APIs.</p>
-</div>
-
-<div class="card">
-<h3>Integração Mercado Livre</h3>
-<p>Sincronização de pedidos, estoque e dados financeiros.</p>
-</div>
-
-<div class="card">
-<h3>Automações Personalizadas</h3>
-<p>Scripts e sistemas automatizados para empresas.</p>
-</div>
+<a href="https://wa.me/5511999999999" class="btn">
+Falar no WhatsApp
+</a>
 
 </div>
 
-</div>
+</section>
 
-
-
-<div class="section">
-<div class="section-title">Contato</div>
-
-<div class="card">
-
-<p>Email: seuemail@email.com</p>
-
-<p>GitHub: github.com/seuusuario</p>
-
-</div>
-
-</div>
-
-
-<footer>
-
-© 2026 Marcos Vinicius  
-Especialista em Integrações e Automações
-
+<footer class="hidden">
+© 2026 - Marcos Vinicius
 </footer>
 
+<!-- botão flutuante whatsapp -->
+<a href="https://wa.me/5511999999999" class="whatsapp">
+WhatsApp
+</a>
 
-</div>
+<script>
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach((entry) => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+});
+
+document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
+
+</script>
 
 </body>
 </html>
